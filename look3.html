@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="look3.css" /> -->
+    <title>Lookbook</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        max-width: 1314px;
+        margin: 0 auto;
+
+        overflow: hidden; /*   responsive */
+      }
+
+      a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+      .column-grid1 {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .column-grid1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* .column-grid1 video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      } */
+
+      .column-grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 28px 0;
+      gap: 28px;
+    }
+    .overlay-image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .column-grid2 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .overlay-text {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      color: white;
+      font-size: 1em;
+      font-family: Arial, sans-serif;
+      letter-spacing: 0.05em;
+
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      
+    }
+
+    .overlay-text a{
+        /* text-decoration: none;
+        color: white; */
+
+        color: #fff;
+        /* text-transform: uppercase; */
+        text-decoration: none;
+        letter-spacing: 0.15em;
+        
+        display: inline-block;
+        /* padding: 15px 20px; */
+        position: relative;
+    }
+
+      .column-grid3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0px 0px 28px 0px;
+        gap: 28px;
+      }
+
+      .column-grid3 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* .overlay-image{
+        position: relative;
+      } */
+
+     
+
+      @media screen and (max-width:768px) {
+        .column-grid2{
+          padding: 10px 0px;
+          gap: 10px;
+        }
+
+        .column-grid3{
+          padding: 0px 0px 10px 0px;
+          gap: 10px;
+        }
+      }
+     @media screen and (max-width:479px) {
+      .column-grid2{
+        padding: 5px 0px;
+        gap: 5px;
+      }
+
+      .column-grid3{
+        gap: 5px;
+        padding: 0px 0px 5px 0px;
+      }
+
+      .overlay-text{
+        font-size: xx-small;
+      }
+     }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="column-grid1">
+        <img src="https://media.octobre-editions.com/video/upload/c_fill,d_placeholder_dark.png,h_768,q_auto:best,w_1366/awnxx0i8js1et3zsyz72.jpg" alt="">
+        <!-- <video class="c-video js-lazy c-card__video is-visible u-cover entered loaded" muted="" playsinline="" loop="" autoplay="" data-ll-status="loaded">
+            <source data-src="https://media.octobre-editions.com/video/upload/awnxx0i8js1et3zsyz72.mp4" type="video/mp4" src="https://media.octobre-editions.com/video/upload/awnxx0i8js1et3zsyz72.mp4">
+            <source data-src="https://media.octobre-editions.com/video/upload/awnxx0i8js1et3zsyz72.webm" type="video/webm" src="https://media.octobre-editions.com/video/upload/awnxx0i8js1et3zsyz72.webm">
+        </video> -->
+      </div>
+
+      <div class="column-grid2">
+        <div class="overlay-image">
+          <img
+            src="https://media.octobre-editions.com/image/upload/c_fill,fl_progressive:semi,q_auto:best,w_658/jjdf4biehk4cv78kexqq.jpg"
+            alt=""
+            class="u-cover"
+          />
+          <div class="overlay-text">
+            <a href="#">ASHTON POLO – $100</a>
+            <a href="#">HUGH COAT – $535</a>
+            
+          </div>
+        </div>
+        <div class="overlay-image">
+          <img
+            src="https://media.octobre-editions.com/image/upload/c_crop,fl_progressive:semi,h_0.95,q_auto:best,w_1,x_0,y_0.04/c_scale,w_658/fvnyru1xbtf3khaa2tm4.jpg"
+            alt=""
+            class="u-cover"
+          />
+          <div class="overlay-text">
+            <a href="#">HUGH COAT – $535</a>
+          </div>
+        </div>
+      </div>
+
+        <div class="column-grid3">
+          <div class="overlay-image">
+            <img
+              src="https://media.octobre-editions.com/image/upload/c_fill,fl_progressive:semi,q_auto:best,w_767/n8adkol52drb73xmaef5.jpg"
+              alt=""
+            />
+            <div class="overlay-text">
+                <a href="#">HUGH COAT – $535</a>
+              </div>
+          </div>
+          <div class="overlay-image">
+            <img
+              src="https://media.octobre-editions.com/image/upload/c_crop,fl_progressive:semi,h_1,q_auto:best,w_0.83,x_0.16,y_0/c_scale,w_767/i9vuumudfl6oaycv0ooi.jpg"
+              alt=""
+            />
+            
+          </div>
+          <div class="overlay-image">
+            <img
+              src="https://media.octobre-editions.com/image/upload/c_crop,fl_progressive:semi,h_0.98333333333333,q_auto:best,w_1,x_0,y_0.0083333333333333/c_scale,w_767/zz0ph1vcjgsnlkcbuta3.jpg"
+              alt=""
+            />
+            <div class="overlay-text">
+                <a href="#">HUGH COAT – $535</a>
+              </div>
+          </div>
+        </div>
+
+        <div class="column-grid1 overlay-image">
+            <img src="https://media.octobre-editions.com/image/upload/c_crop,fl_progressive:semi,h_0.93,q_auto:best,w_1,x_0,y_0.06/c_scale,w_1314/ipph7cy5smvtnza2jilb.jpg" alt="">
+            <div class="overlay-text">
+                <a href="#">HUGH COAT – $535</a>
+              </div>
+        </div>
+
+        <div class="column-grid2">
+            <div class="overlay-image">
+                <img src="https://media.octobre-editions.com/image/upload/c_crop,fl_progressive:semi,h_0.95,q_auto:best,w_1,x_0,y_0.04/c_scale,w_658/bbjod9v4knrbqdmnr8xj.jpg" alt="">
+                <div class="overlay-text">
+                    <a href="#">HUGH COAT – $535</a>
+                  </div>
+            </div>
+            <div class="overlay-image">
+                <img src="https://media.octobre-editions.com/image/upload/c_crop,fl_progressive:semi,h_0.74,q_auto:best,w_0.77,x_0,y_0.19/c_scale,w_658/arbjafrut9cv67wntahp.jpg" alt="">
+                <div class="overlay-text">
+                    <a href="#">HUGH COAT – $535</a>
+                  </div>
+            </div>
+        </div>
+
+        <div class="column-grid3">
+            <div class="overlay-image">
+                <img src="https://media.octobre-editions.com/image/upload/c_crop,fl_progressive:semi,h_1,q_auto:best,w_0.83916083916084,x_0.08041958041958,y_0/c_scale,w_767/pkfdklegmr4a7g8qdvf2.jpg" alt="">
+                <div class="overlay-text">
+                    <a href="#">HUGH COAT – $535</a>
+                  </div>
+            </div>
+            <div >
+                <img src="https://media.octobre-editions.com/image/upload/c_crop,fl_progressive:semi,h_1,q_auto:best,w_0.83916083916084,x_0.08041958041958,y_0/c_scale,w_767/oxryx9khnr2lzdux37gw.jpg" alt="">
+                
+            </div>
+            <div class="overlay-image">
+                <img src="https://media.octobre-editions.com/image/upload/c_crop,fl_progressive:semi,h_1,q_auto:best,w_0.83,x_0,y_0/c_scale,w_767/jv5jbhggr40w2o6ibfzr.jpg" alt="">
+                <div class="overlay-text">
+                    <a href="#">HUGH COAT – $535</a>
+                  </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
